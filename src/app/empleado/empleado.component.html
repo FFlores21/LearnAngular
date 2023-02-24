@@ -4,8 +4,16 @@
 <p>Empresa:{{getempresa()}}</p>
 
 
-<input type="text" #empresa (keyup)="0">
+<input type="text" #empresa (keyup)="0" [disabled]="habilitacionCuadro" >
 
-<br/><br/>
+<br/>
 
+
+{{textoDeRegistro}}
+<br/>
+<p>Registrado : <input type="radio" value="si" name="nRegistro" [checked]="userRegistrado" (click)="setUsuarioregistrado($event)"  ></p> 
+
+<p>No Registrado : <input type="radio" value="no" name="nRegistro"  [checked]="userRegistrado" (click)="setUsuarioregistrado($event)"  ></p> 
+
+{{getRegistroUser()}}
 <!-- <button type="button" value="dale" (click)="llamaEmpresa(empresa.value)">Dale</button> -->
