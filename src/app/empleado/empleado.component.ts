@@ -11,7 +11,12 @@ export class EmpleadoComponent {
   private nombre='Carlos';
   private apellido='Zepeda';
   private edad=27;
-  private empresa='Bar-beria';
+   empresa='Google';
+
+  // cambiaEmpresa(event:Event){
+  //   this.empresa=(<HTMLInputElement>event.target).value;
+
+  // }
 
   habilitacionCuadro =false;
 

@@ -1,10 +1,14 @@
 <p>Nombre:{{getnombre()}}</p>
 <p>Apellido:{{getapellido()}}</p>
-<p>Edad:{{empresa.value}}</p>
+<p>Edad:{{getedad()}}</p>
 <p>Empresa:{{getempresa()}}</p>
 
 
-<input type="text" #empresa (keyup)="0" [disabled]="habilitacionCuadro" >
+<!-- <input type="text" #empresa (keyup)="0" [disabled]="habilitacionCuadro" > -->
+
+<!-- <p>Introducir la Empresa</p> <input type="text" (input)="cambiaEmpresa($event)"  > -->
+
+<p>Introducir la Empresa</p> <input type="text" [(ngModel)]="empresa"  >
 
 <br/>
 
@@ -16,4 +20,5 @@
 <p>No Registrado : <input type="radio" value="no" name="nRegistro"  [checked]="userRegistrado" (click)="setUsuarioregistrado($event)"  ></p> 
 
 {{getRegistroUser()}}
+
 <!-- <button type="button" value="dale" (click)="llamaEmpresa(empresa.value)">Dale</button> -->
